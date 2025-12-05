@@ -1,15 +1,17 @@
 *{
     font-family: "IBM Plex Mono", monospace;
     text-decoration: none;
-
 }
-body{
-
+html{
+    height: 100%;
+    margin: 0;
+    padding: 0;
     background-image: url(bgg1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-
+    background-position: center;
 }
+
 
 img {
     max-width: 100%;
@@ -29,19 +31,19 @@ img {
     right: 0;
     margin-top: 0;
     background-color: rgba(255, 255, 255, 0.5);
-     
+    z-index: 1000;
 }
-
 
 #header .logo img {
     display: block;
+    width: 160px;
+    height: auto;
 }
 
 .menu {
-    /* padding-left: 980px; */
-  display: flex;
-  gap: 30px;}
-
+    display: flex;
+    gap: 30px;
+}
 
 .bar{
    text-decoration: none;
@@ -55,44 +57,40 @@ img {
     border-radius: 10px;
     padding: 10px;
     box-shadow: 2px 1px 2px;
+    transition: 0.2s ease;
 }
 
 .bar:hover {
     color:rgb(84, 159, 162);
-    font-size: 25px;
     box-shadow: 10px 3px 1px;
 }
-
 
 .subpage1{
     display: flex;
     flex-direction: column;
-    justify-self: end;
     align-self: center;
     align-items: center;
     justify-content: start;
-
+    justify-self: end;
     height: auto;
     width: 430px;
     background-color: rgb(255, 255, 255);
     border: 3px solid black;
-
     font-size: 2rem;
     margin-right: 40px;
     margin-top: 200px;
     border-radius: 15px;
-
     padding: 20px;
     box-shadow: 10px 10px 10px black;
 }
+
 .subhead{
     font-size: 2rem;
     text-align: center;
     color: black;
     font-weight: bold;
-    align-self: flex-center;
-    justify-self: center;
 }
+
 .input1 {
     width: 100%;
     padding: 14px;
@@ -134,15 +132,47 @@ img {
     margin-right: 30px;
 }
 
-@media (max-width: 600px) {
 
-    
+
+@media (max-width: 1024px) {
 
     #header {
         padding: 10px 20px;
-        flex-direction: column;
+    }
+
+    #header .logo img {
+        width: 130px;
+    }
+
+    .menu {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .bar {
+        font-size: 18px;
+        margin-left: 0;
+        padding: 8px 10px;
+    }
+
+    .subpage1 {
+        margin-top: 180px;
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #header {
+        padding: 10px 20px;
+        flex-direction: row;
         align-items: flex-start;
+        justify-content:flex-end;
         gap: 8px;
+    }
+
+    #header .logo img {
+        width: 100px;
     }
 
     .menu {
@@ -150,19 +180,19 @@ img {
         flex-wrap: wrap;
         justify-content: flex-start;
         gap: 10px;
-        
     }
 
     .bar {
-        font-size: 18px;
+        font-size: 16px;
         margin-left: 0;
-        padding: 8px 12px;
+        padding: 6px 10px;
     }
 
     .subpage1 {
         width: 90%;           
         margin-top: 160px; 
-        margin-left: 40px;   
+        margin-left: auto;
+        margin-right: auto;   
         font-size: 1.6rem;
     }
 
@@ -171,5 +201,3 @@ img {
         font-size: 1.2rem;
     }
 }
-
-
