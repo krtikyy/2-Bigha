@@ -10,6 +10,9 @@ body{
     background-size: cover;
 
 }
+.logo{
+    border-radius:10px;
+}
 img {
     max-width: 100%;
     height: auto;
@@ -153,3 +156,4 @@ footer h2 {
     margin: 0;
 
 }
+
