@@ -1,4 +1,3 @@
-
 *{
     font-family: "IBM Plex Mono", monospace;
     text-decoration: none;
@@ -29,20 +28,22 @@ img {
     left: 0;
     right: 0;
     z-index: 1000;
+    margin-top: 0;
 }
-
 
 #header .logo img {
     display: block;
+    width: 160px;     
+    height: auto;
 }
 
 .menu {
-    /* padding-left: 980px; */
-  display: flex;
-  gap: 30px;}
+    display: flex;
+    gap: 30px;
+}
 
 .bar{
-   text-decoration: none;
+    text-decoration: none;
     color: black;
     font-size: 25px;
     margin-left: 25px;
@@ -53,30 +54,27 @@ img {
     border-radius: 10px;
     padding: 10px;
     box-shadow: 2px 1px 2px;
+    transition: 0.2s ease;
 }
 
 .bar:hover {
     color:rgb(84, 159, 162);
-    font-size: 25px;
     box-shadow: 10px 3px 1px;
 }
 
-
-
 #add_property{
     background-color:rgb(84, 159, 162);
-    border: 20px;
+    border: 0;
     border-radius: 14px;
     color: white;
     font-size: 30px;
     padding-top:3px;
+    padding-inline: 15px;
     margin-top: 25px;
     display: inline-flex;
     justify-content: center;
     gap: 12px;
 }
-
-
 
 #home{
     display: flex;
@@ -100,7 +98,6 @@ img {
     text-shadow: .5px .5px .5px black;
 }
 
-
 #steps{
     padding-top: 50px;
     background-image: url(bgg3.jpg);
@@ -108,18 +105,13 @@ img {
 
 .steps{
     display: grid;
-    grid-template-columns: 30fr 30fr 30fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
     padding: 10px 40px 40px 40px;
-    
-    
-    
-    
 }
 
 .step{
     box-shadow: 2px 1px 2px;
-    /* padding-left:1 ; */
     border: 2px solid black;
     border-radius: 10px;
     align-items: center;
@@ -131,7 +123,6 @@ img {
 }
 
 #type{
-
     background-color:rgb(84, 159, 162);
     color: white;
     display: grid;
@@ -141,10 +132,7 @@ img {
     align-items: start;
 }
 
-
-
 .category{
-
     border: 2px solid black;
     box-shadow: 2px 1px 2px;
     background-color: white;
@@ -166,52 +154,99 @@ img {
 
 
 
+/* Tablet (<= 1024px) */
+@media (max-width: 1024px) {
+
+    #header {
+        padding: 10px 20px;
+    }
+
+    #header .logo img {
+        width: 130px;
+    }
+
+    .menu {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .bar {
+        font-size: 18px;
+        margin-left: 0;
+        padding: 8px 10px;
+    }
+
+    #main {
+        font-size: 24px;
+        padding: 120px 20px 40px 20px;
+    }
+
+    .steps {
+        grid-template-columns: 1fr 1fr;
+        padding: 20px;
+    }
+
+    #type {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        padding: 40px 20px;
+    }
+}
 
 @media (max-width: 600px) {
 
     #header {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content:flex-end;
+        gap: 10px;
         padding: 10px 15px;
-        display: flex;
-        flex-wrap:wrap;
+    }
+
+    #header .logo img {
+        width: 100px;
     }
 
     .menu {
-        justify-content: center;
-        display: flex;
-        flex-wrap:wrap;
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     .bar {
         font-size: 14px;
-        padding: 5px 8px;
+        padding: 6px 8px;
+        margin-left: 0;
     }
 
     #main {
         font-size: 20px;
-        padding: 90px 15px 40px 15px;
+        padding: 100px 15px 40px 15px;
     }
 
     #add_property {
         width: 100%;
         justify-content: center;
         font-size: 18px;
+        text-align: center;
     }
 
     .steps {
         grid-template-columns: 1fr;
+        padding: 20px 15px;
     }
 
     #steps {
-        padding: 40px 20px;
+        padding: 40px 15px;
     }
 
     #type {
         grid-template-columns: 1fr;
-        padding: 40px 20px;
+        padding: 30px 15px;
+        text-align: center;
     }
 
     .category {
         width: 100%;
     }
-
 }
