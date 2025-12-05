@@ -1,49 +1,54 @@
-
 * {
     font-family: "IBM Plex Mono", monospace;
     text-decoration: none;
 }
-body{
 
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
     background-image: url(bgg1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+}
 
-}
-.logo{
-    border-radius:10px;
-}
 img {
     max-width: 100%;
     height: auto;
 }
 
+
+
 #header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 40px ;
+    padding: 10px 40px;
     position: fixed;
     background-color: rgba(255, 255, 255, 0.5);
-    margin-top: 0px;
+    margin-top: 0;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1000;
 }
-
 
 #header .logo img {
     display: block;
-    border-radius: 10px;
+    width: 160px;
+    height: auto;
 }
 
 .menu {
-   
-  display: flex;
-  gap: 30px;}
+    display: flex;
+    gap: 30px;
+}
 
 .bar{
-   text-decoration: none;
+    text-decoration: none;
     color: black;
     font-size: 25px;
     margin-left: 25px;
@@ -58,9 +63,9 @@ img {
 
 .bar:hover {
     color:rgb(84, 159, 162);
-    font-size: 25px;
     box-shadow: 10px 3px 1px;
 }
+
 
 
 .page-title {
@@ -68,7 +73,7 @@ img {
     font-size: 3.5rem;
     margin: 30px 0;
     color: #333;
-    padding-top: 100px;
+    padding-top: 120px;  
 }
 
 
@@ -79,9 +84,8 @@ img {
     gap: 40px;
     padding: 40px;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
 }
-
 
 .office-card {
     border: 2px solid rgb(0, 0, 0);
@@ -145,6 +149,7 @@ img {
 }
 
 
+
 footer {
     background-color: rgb(84, 159, 162);
     color: white;
@@ -154,6 +159,93 @@ footer {
 
 footer h2 {
     margin: 0;
-
+    text-align: center;
 }
 
+
+
+@media (max-width: 1024px) {
+
+    #header {
+        padding: 10px 20px;
+    }
+
+    #header .logo img {
+        width: 130px;
+    }
+
+    .menu {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .bar {
+        font-size: 18px;
+        margin-left: 0;
+        padding: 8px 10px;
+    }
+
+    .page-title {
+        font-size: 2.5rem;
+        padding-top: 110px;
+        margin-bottom: 20px;
+    }
+
+    .office-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    #header {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 10px;
+        padding: 10px 15px;
+    }
+
+    #header .logo img {
+        width: 100px;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .bar {
+        font-size: 14px;
+        padding: 6px 8px;
+        margin-left: 0;
+    }
+
+    .page-title {
+        font-size: 2rem;
+        padding-top: 100px;
+        margin: 20px 10px;
+    }
+
+    .office-grid {
+        grid-template-columns: 1fr;
+        padding: 20px 15px;
+        gap: 20px;
+    }
+
+    .card-content h3 {
+        font-size: 1.4rem;
+    }
+
+    .price {
+        font-size: 1.2rem;
+    }
+
+    .details-button {
+        font-size: 1rem;
+    }
+}
